@@ -13,7 +13,7 @@ TIMEOUT_LONG = 10
 class tester_most_common_char(unittest.TestCase):
 	# O(k) time and space
 	def test__given(self):
-		self.assertEqual(most_common_char('AVX is a feature in modern CPUs that allows one instruction to affect multiple units. vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvectors'), 'v')
+		self.assertEqual(most_common_char('AVXisafeatureinmodernCPUsthatallowsoneinstructiontoaffectmultipleunits.vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvectors'), 'v')
 		self.assertIn(most_common_char('aabbaabb'), ['a','b'])
 
 

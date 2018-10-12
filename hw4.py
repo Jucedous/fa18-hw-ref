@@ -1,3 +1,4 @@
+import collections
 """
 CS 196 FA18 HW4
 Prepared by Andrew, Emilio, and Prithvi
@@ -13,6 +14,23 @@ most_common_char
 Given an input string s, return the most common character in s.
 """
 def most_common_char(s):
+	dict = {}
+	a = ""
+	count = 0
+	for n in s:
+		keys = dict.keys()
+		if n in keys:
+			dict[n] += 1
+		else:
+			dict[n] = 1
+	for x, y in dict.items():
+		if y > count:
+			count = y
+		if y == count:
+			a += x
+		if y < count:
+			a = [key for (key, value) in dict.items() if value == count]
+	return a
 	pass
 
 
